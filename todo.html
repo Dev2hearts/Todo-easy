@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="todo.css" />
+        <script src="todo.js"></script>
+    </head>
+    <body>
+        <div class="todo-container">
+            <h1 class="todo-title">할 일 목록</h1>
+            <input type="text" class="js-todo-input" placeholder="할 일을 입력하세요" />
+
+            <div class="button-group">
+                <button class="add-btn" onclick="addTodo()">추가</button>
+                <button class="reset-btn" onclick="resetTodo()">초기화</button>
+            </div>
+
+            <ul class="todo-list"></ul>
+        </div>
+    </body>
+</html>
