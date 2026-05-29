@@ -115,6 +115,12 @@ body {
     flex-shrink: 0;
 }
 
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.complete-btn,
 .edit-btn,
 .delete-btn {
     padding: 6px 10px;
@@ -122,6 +128,11 @@ body {
     border-radius: 4px;
     font-size: 12px;
     cursor: pointer;
+}
+
+.complete-btn {
+    background-color: #d1fae5;
+    color: #10b981;
 }
 
 .edit-btn {
@@ -132,6 +143,10 @@ body {
 .delete-btn {
     background-color: #fff1f2;
     color: #e11d48;
+}
+
+.completed-btn:hover {
+    background-color: #c7f0d9;
 }
 
 .edit-btn:hover {

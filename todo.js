@@ -19,6 +19,11 @@ function addTodo() {
     const buttonContainer = document.createElement("div");
     buttonContainer.className = "button-container";
 
+    const completeBtn = document.createElement("button");
+    completeBtn.className = "complete-btn";
+    completeBtn.setAttribute("onclick", "toggleComplete(this)");
+    completeBtn.textContent = "완료";
+
     const editBtn = document.createElement("button");
     editBtn.className = "edit-btn";
     editBtn.setAttribute("onclick", "editTodo(this)");
@@ -29,6 +34,7 @@ function addTodo() {
     deleteBtn.setAttribute("onclick", "deleteTodo(this)");
     deleteBtn.textContent = "삭제";
 
+    buttonContainer.appendChild(completeBtn);
     buttonContainer.appendChild(editBtn);
     buttonContainer.appendChild(deleteBtn);
 
@@ -40,6 +46,13 @@ function addTodo() {
     input.value = "";
     input.focus();
     localStorage.setItem("todos", JSON.stringify({ ...todos, [todoText]: true }));
+}
+
+function toggleComplete(button) {
+    const li = button.closest("li");
+    const p = li.querySelector(".todo-text");
+    p.classList.toggle("completed");
+    button.classList.toggle("completed-btn");
 }
 
 function deleteTodo(button) {
@@ -89,6 +102,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const buttonContainer = document.createElement("div");
         buttonContainer.className = "button-container";
 
+        const completeBtn = document.createElement("button");
+        completeBtn.className = "complete-btn";
+        completeBtn.setAttribute("onclick", "toggleComplete(this)");
+        completeBtn.textContent = "완료";
+
         const editBtn = document.createElement("button");
         editBtn.className = "edit-btn";
         editBtn.setAttribute("onclick", "editTodo(this)");
@@ -99,6 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
         deleteBtn.setAttribute("onclick", "deleteTodo(this)");
         deleteBtn.textContent = "삭제";
 
+        buttonContainer.appendChild(completeBtn);
         buttonContainer.appendChild(editBtn);
         buttonContainer.appendChild(deleteBtn);
 
