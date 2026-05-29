@@ -4,7 +4,7 @@
 
 - **개발자:** 2501062 박지성 (GitHub: [Dev2hearts](https://github.com/Dev2hearts)) [1, 5]
 - **저장소:** [https://github.com/Dev2hearts/Todo-easy](https://github.com/Dev2hearts/Todo-easy) [5]
-- **배포 사이트:** [todo-list 배포 주소 링크 삽입] [6]
+- **배포 사이트:** [https://dev2hearts.github.io/Todo-easy/] [6]
 
 ---
 
